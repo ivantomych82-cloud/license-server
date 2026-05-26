@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from datetime import datetime
 import json
 
 app = Flask(__name__)
@@ -25,6 +26,14 @@ def check():
 
     if not lic["active"]:
         return jsonify({"status": "disabled"})
+    
+    expire_date = datetime.strptime(
+        lic["expires"],
+        "%Y-%m-%d"
+    )
+
+    if datetime.now() > expire_date:
+        return jsonify({"status": "expired"})
 
     if lic["hwid"] == "":
         lic["hwid"] = hwid
