@@ -1,6 +1,6 @@
 {
     "TEST123": {
-        "active": true,
+        "active": false,
         "hwid": "",
         "expires": "2027-01-01"
     },
