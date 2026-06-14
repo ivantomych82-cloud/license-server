@@ -38,6 +38,8 @@ def check():
     if lic["hwid"] == "":
         lic["hwid"] = hwid
 
+        print(f"[ACTIVATION] {key} -> {hwid}")
+
         with open("licenses.json", "w") as f:
             json.dump(licenses, f, indent=4)
 
