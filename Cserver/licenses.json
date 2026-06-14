@@ -6,7 +6,7 @@
     },
 
     "6VIP999": {
-        "active": false,
+        "active": true,
         "hwid": "",
         "expires": "2027-01-01"
     }
