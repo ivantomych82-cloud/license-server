@@ -17,8 +17,6 @@ def check():
     key = data["key"]
     hwid = data["hwid"]
 
-    print(f"[CHECK] key={key} hwid={hwid}", flush=True)
-
     with open("licenses.json", "r") as f:
         licenses = json.load(f)
 
@@ -38,11 +36,10 @@ def check():
     if datetime.now() > expire_date:
         return jsonify({"status": "expired"})
     
-    print(f"[LICENSE] {lic}", flush=True)
     if lic["hwid"] == "":
         lic["hwid"] = hwid
 
-        print(f"[ACTIVATION] {key} -> {hwid}")
+        print(f"[ACTIVATION] {key} -> {hwid}", flush=True)
 
         with open("licenses.json", "w") as f:
             json.dump(licenses, f, indent=4)
