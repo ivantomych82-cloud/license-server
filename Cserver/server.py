@@ -17,6 +17,8 @@ def check():
     key = data["key"]
     hwid = data["hwid"]
 
+    print(f"[CHECK] key={key} hwid={hwid}", flush=True)
+
     with open("licenses.json", "r") as f:
         licenses = json.load(f)
 
