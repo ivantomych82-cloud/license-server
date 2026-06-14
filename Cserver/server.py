@@ -37,7 +37,8 @@ def check():
 
     if datetime.now() > expire_date:
         return jsonify({"status": "expired"})
-
+    
+    print(f"[LICENSE] {lic}", flush=True)
     if lic["hwid"] == "":
         lic["hwid"] = hwid
 
