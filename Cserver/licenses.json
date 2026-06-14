@@ -1,11 +1,11 @@
 {
-    "3TEST123": {
+    "5TEST123": {
         "active": true,
         "hwid": "212086362846810",
         "expires": "2027-01-01"
     },
 
-    "3VIP999": {
+    "5VIP999": {
         "active": true,
         "hwid": "",
         "expires": "2027-01-01"
