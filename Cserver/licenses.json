@@ -1,11 +1,11 @@
 {
-    "7TEST123": {
+    "asus": {
         "active": true,
         "hwid": "",
         "expires": "2027-01-01"
     },
 
-    "7VIP999": {
+    "dell": {
         "active": true,
         "hwid": "",
         "expires": "2027-01-01"
